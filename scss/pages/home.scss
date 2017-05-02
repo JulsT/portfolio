@@ -1,0 +1,12 @@
+@import "../global";
+
+section{
+  min-height: 20rem;
+  border: 1px solid #b7ff54;
+  color: white;
+}
+.hero{
+  background: url("../../images/bg-hero.jpg") no-repeat center center;
+  background-size: cover;
+}
+
