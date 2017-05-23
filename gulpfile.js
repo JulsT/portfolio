@@ -84,4 +84,4 @@ gulp.task('watch', function () {
 });
 
 gulp.task('default', ['clean', 'sass:dev', 'js:dev', 'watch']);
-gulp.task('prod', ['clean', 'sass:prod', 'js:prod']);
+gulp.task('prod', ['clean', 'js:prod', 'sass:prod']);
