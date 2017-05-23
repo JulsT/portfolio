@@ -1,12 +1,297 @@
 @import "../global";
 
-section{
-  min-height: 20rem;
-  border: 1px solid #b7ff54;
-  color: white;
-}
 .hero{
   background: url("../../images/bg-hero.jpg") no-repeat center center;
   background-size: cover;
+  border-bottom: 10px solid $prime;
+
+    header{
+      max-width: $mainContainer;
+      padding-left: 13.5rem;
+      padding-right: 8rem;
+      margin: 0;
+      padding-top: 4rem;
+      @media (max-width: $screen-md){
+        padding-top: 1rem;
+        padding-left: $containerHorIndentMobile;
+        padding-right: $containerHorIndentMobile;
+      }
+      .logo{
+        font-family: "Merriweather";
+        font-size: 2.4rem;
+        color: #fff;
+        font-weight: bold;
+        padding-bottom: 1rem;
+        @media (max-width: $screen-sm){
+          font-size: 1.8rem;
+        }
+      }
+      .hamburger {
+        color: #fff;
+        font-size: 2rem;
+        display: none;
+        cursor: pointer;
+        &:hover {
+          color: $prime;
+        }
+        @media (max-width: $screen-sm){
+          display: block;
+        }
+      }
+      .hero-nav {
+        margin-top: 1rem;
+        display: block;
+        .hero-nav-item{
+          display: inline-block;
+          margin-left: 4.4rem;
+          a{
+            color: white;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+          }
+          a:hover{
+            padding-bottom: 10px;
+            border-bottom: 3px solid $prime;
+          }
+          @media (max-width: $screen-sm){
+            display: block;
+            padding-bottom: 2rem;
+          }
+        }
+        @media (max-width: $screen-sm){
+          display: none;
+          margin-right: 5rem;
+        }
+      }
+
+    }
+  .wrap{
+    padding-bottom: 13.3rem;
+    @media (max-width: $screen-sm){
+      padding-bottom: 2rem;
+    }
+  }
+  hr{
+    margin-top: 4.5rem;
+    margin-bottom: 3.8rem;
+    border: none;
+    color: $prime; /* ÷вет линии дл€ остальных браузеров */
+    background-color: $prime; /* ÷вет линии дл€ браузера Firefox и Opera */
+    height: 1px;
+    width: 2.7rem;
+    @media (max-width: $screen-md){
+      margin-top: 2.9rem;
+      margin-bottom: 2.9rem;
+    }
+  }
+  .hero-title {
+    font-family: "Merriweather";
+    font-weight: 600;
+    font-size: 4.8rem;
+    color: #fff;
+    margin-bottom: 8rem;
+    line-height: 1.4;
+
+    @media (max-width: $screen-md){
+      font-size: 3.4rem;
+      margin-bottom: 5rem;
+    }
+
+    @media (max-width: $screen-sm){
+      font-size: 2.4rem;
+      margin-bottom: 3rem;
+    }
+  }
 }
+.service-block{
+  .service-item{
+    @media (max-width: $screen-sm){
+      font-size: 2.4rem;
+      margin-bottom: 1rem;
+      *{
+        margin-bottom: 2rem;
+      }
+    }
+  }
+  div[class^="circle"]{
+    width: 16.5rem;
+    height: 16.5rem;
+    @include border-radius(50%);
+  }
+  .circle1{
+    img{
+      @include abs-pos(4.7rem, 6rem)
+    }
+    .double{
+      transform: rotate(90deg);
+      @include abs-pos(6.2rem, 4rem)
+    }
+  }
+  .circle2{
+    img{
+      transform: rotate(180deg);
+      @include abs-pos(4.7rem, 4rem)
+    }
+    .double{
+      transform: rotate(360deg);
+      @include abs-pos(6rem, 5.2rem)
+    }
+  }
+  .circle3{
+    img{
+      @include abs-pos(6rem,6rem)
+    }
+    .double{
+      @include abs-pos(6rem, 3.8rem)
+    }
+  }
+  .h3{
+    font-weight: bold;
+  }
+  .btn-large{
+    margin-bottom: 0;
+  }
+}
+.about-block{
+  img{
+    @include border-radius(50%);
+  }
+  .h3{
+    font-weight: bold;
+  }
+  .about-text{
+    p{
+      margin-bottom: 4rem;
+      font-size: 1.8rem;
+      line-height: 2.7rem;
+      @media (max-width: $screen-sm){
+        margin-bottom: 2rem;
+      }
+    }
+    p:last-child{
+      margin-bottom: 0;
+    }
+    span{
+      font-weight: bold;
+    }
+  }
+  *{
+    @media (max-width: $screen-sm){
+      margin-bottom: 1rem;
+    }
+  }
+}
+.work-block{
+  .thumbnail{
+    position: relative;
+
+
+    .hover{
+      transition: .5s ease;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%)
+    }
+    &:hover {
+      background-color: $orangeTint;
+      img {
+        opacity: 0.4;
+      }
+      .hover{
+        opacity: 1;
+      }
+    }
+  }
+  }
+.slides-container{
+  max-width: 74.5rem;
+  position: relative;
+  margin: auto;
+  p{
+    color: #adaba5;
+    line-height: 3.5rem;
+  }
+  .client{
+    *{
+      display: inline-block;
+
+    }
+    img{
+      width: 6.5rem;
+      border: 5px solid white;
+      @include border-radius(50%);
+      margin: 1rem;
+      vertical-align: top;
+    }
+    .h4{
+      font-weight: bold;
+      color: $darkDarkGray;
+     vertical-align: middle;
+      i{
+        font-family: "Open Sans";
+        font-size: 1.4rem;
+        font-weight: normal;
+      }
+    }
+  }
+}
+.contact{
+  .h2{
+    font-size: 4.8rem;
+  }
+  .h5{
+    color: #a6a49d;
+  }
+}
+footer{
+  background-color: $darkDarkGray;
+  p{
+    color: #504b46;
+  }
+  .social{
+    div{
+      display: inline-block;
+      @include border-radius(50%);
+      border: 1px solid #504b46;
+      width: 6.6rem;
+      height: 6.6rem;
+      position: relative;
+      &+div{
+        margin-left: 3rem;
+      }
+        i{
+          width: 50%;
+          height: 50%;
+          margin: auto;
+        @include abs-pos(0,0,0,0);
+        color: #504b46;
+        font-size: 3.3rem;
+          @media (max-width: $screen-sm){
+            font-size: 2rem;
+          }
+      }
+      &:hover{
+        border: 1px solid $white;
+        i{
+          color: $white;
+        }
+      }
+      @media (max-width: $screen-sm){
+        width: 4.6rem;
+        height: 4.6rem;
+        &+div{
+          margin-left: 2rem;
+        }
+      }
+    }
+  }
+}
+
+
+
 

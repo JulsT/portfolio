@@ -1,4 +1,31 @@
 div, p, section, footer, header, aside {
   box-sizing: border-box;
 }
-s
+.wrap {
+  padding-top: $containerVerIndent;
+  padding-bottom: $containerVerIndent;
+  max-width: $mainContainer;
+  padding-left: $containerHorIndent;
+  padding-right: $containerHorIndent;
+  margin: 0 ;
+  @media (max-width: $screen-sm){
+    padding-top: $containerVerIndentMobile;
+    padding-bottom: $containerVerIndentMobile;
+    padding-left: $containerHorIndentMobile;
+    padding-right: $containerHorIndentMobile;
+  }
+}
+.block-header{
+  @media (max-width: $screen-sm) {
+    margin-bottom: 4rem;
+  }
+  .h2{
+    font-family: "Merriweather";
+    color: $darkDarkGray;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 2.8rem;
+  }
+}
+
+
