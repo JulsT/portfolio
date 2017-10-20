@@ -28,6 +28,7 @@
     "gulp-uglify": "^2.1.2"
   },
   "dependencies": {
-    "bootstrap-sass": "^3.3.7"
+    "bootstrap-sass": "^3.3.7",
+    "del": "^2.2.2"
   }
 }

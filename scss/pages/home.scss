@@ -6,10 +6,9 @@
   border-bottom: 10px solid $prime;
 
     header{
-      max-width: $mainContainer;
       padding-left: 13.5rem;
       padding-right: 8rem;
-      margin: 0;
+      margin: 0 auto;
       padding-top: 4rem;
       @media (max-width: $screen-md){
         padding-top: 1rem;
@@ -77,8 +76,8 @@
     margin-top: 4.5rem;
     margin-bottom: 3.8rem;
     border: none;
-    color: $prime; /* Цвет линии для остальных браузеров */
-    background-color: $prime; /* Цвет линии для браузера Firefox и Opera */
+    color: $prime; /* пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
+    background-color: $prime; /* пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Firefox пїЅ Opera */
     height: 1px;
     width: 2.7rem;
     @media (max-width: $screen-md){
@@ -186,8 +185,10 @@
 .work-block{
   .thumbnail{
     position: relative;
+    img{
+      width: 100%;
 
-
+    }
     .hover{
       transition: .5s ease;
       opacity: 0;
@@ -291,7 +292,3 @@ footer{
     }
   }
 }
-
-
-
-
